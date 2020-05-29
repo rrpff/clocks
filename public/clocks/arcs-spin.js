@@ -18,7 +18,7 @@ export default (ctx, hours, minutes, seconds) => {
   ctx.stroke()
 
   ctx.beginPath()
-  ctx.arc(...CENTER, RADIUS * 0.66, secondRotation * 3, secondRotation * 3 + minuteRotation)
+  ctx.arc(...CENTER, RADIUS * 0.66, -secondRotation * 3, -secondRotation * 3 + minuteRotation)
   ctx.stroke()
 
   ctx.beginPath()
