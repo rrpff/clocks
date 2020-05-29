@@ -1,0 +1,29 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: #eee;
+}
+
+.container {
+  display: block;
+  padding: 60px;
+  text-align: center;
+}
+
+.container canvas {
+  padding: 30px;
+}
+
+.toolbar {
+  position: fixed;
+  font-weight: bold;
+  left: 10px;
+  top: 10px;
+}
+
+label,
+input,
+button {
+  display: block
+}
