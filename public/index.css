@@ -7,8 +7,7 @@ html {
 
 .container {
   display: block;
-  padding: 60px;
-  text-align: center;
+  padding: 60px 60px 60px 180px;
 }
 
 .container canvas {

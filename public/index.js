@@ -1,12 +1,12 @@
 const CLOCK_MODULES = [
   () => import("./clocks/simple-analogue.js"),
   () => import("./clocks/coloured-analogue.js"),
+  () => import("./clocks/simple-digital.js"),
+  () => import("./clocks/alarm-clock-digital.js"),
   () => import("./clocks/happening.js"),
   // () => import("./clocks/24-hour-single-use-timer.js"),
   () => import("./clocks/arcs.js"),
-  () => import("./clocks/arcs-gradient.js"),
-  () => import("./clocks/simple-digital.js"),
-  () => import("./clocks/alarm-clock-digital.js"),
+  () => import("./clocks/arcs-spin.js"),
 ]
 
 const FPS_LABEL_EL = document.getElementById("fps-label")

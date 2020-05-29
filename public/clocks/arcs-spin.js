@@ -8,24 +8,20 @@ export default (ctx, hours, minutes, seconds) => {
   const minuteRotation = (minutes / 60 * 2 * Math.PI)
   const secondRotation = (seconds / 60 * 2 * Math.PI)
 
-  const gradient = ctx.createLinearGradient(0, 0, WIDTH, HEIGHT)
-  gradient.addColorStop(0.0, "#ddd")
-  gradient.addColorStop(1.0, "#000")
-
-  ctx.lineWidth = 40
-  ctx.strokeStyle = gradient
+  ctx.lineWidth = 45
+  ctx.strokeStyle = "red"
 
   ctx.clearRect(0, 0, WIDTH, HEIGHT)
 
   ctx.beginPath()
-  ctx.arc(...CENTER, RADIUS * 0.99, 0, hourRotation)
+  ctx.arc(...CENTER, RADIUS * 0.99, secondRotation, secondRotation + hourRotation)
   ctx.stroke()
 
   ctx.beginPath()
-  ctx.arc(...CENTER, RADIUS * 0.66, 0, minuteRotation)
+  ctx.arc(...CENTER, RADIUS * 0.66, secondRotation * 3, secondRotation * 3 + minuteRotation)
   ctx.stroke()
 
   ctx.beginPath()
-  ctx.arc(...CENTER, RADIUS * 0.33, 0, secondRotation)
+  ctx.arc(...CENTER, RADIUS * 0.33, secondRotation * 5, secondRotation * 5 + secondRotation)
   ctx.stroke()
 }
